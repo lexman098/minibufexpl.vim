@@ -2297,6 +2297,7 @@ endfunction
 function! <SID>ListAdd(list,val)
   call <SID>DEBUG('Entering ListAdd('.string(a:list).','.a:val.')',10)
   call add(a:list, a:val)
+  call sort(a:list)
   call <SID>DEBUG('Leaving ListAdd()',10)
 endfunction
 
